@@ -1,0 +1,1 @@
+create ebs module with zone and size as variables.

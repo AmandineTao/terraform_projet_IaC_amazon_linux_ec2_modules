@@ -1,0 +1,1 @@
+create a public ip adress to be related with the security group and the ec2 instance.

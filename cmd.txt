@@ -1,0 +1,32 @@
+#create your key-pars file and add it in the folder app
+#in app/main.tf:
+  # replace "devops-amandine" with your "key-pairs-file-name"
+  key_name = "key-pairs-file-name"
+
+  # replace "devops-amandine.pem" with your "key-pairs-file-name.pem"
+  key_path = "key-pairs-file-name.pem"
+
+#on your aws account create a remote backend of type "s3" and
+#in app/main.tf:
+  #replace "terraform-backend-amandine" with your "remote-backend-name"
+  bucket ="remote-backend-name"
+
+#move to app/ folder
+cd app/
+
+#add your access keys in var env
+  export AWS_ACCESS_KEY_ID="your_AWS_ACCESS_KEY_ID"
+
+  export AWS_SECRET_ACCESS_KEY="your_AWS_SECRET_ACCESS_KEY"
+
+#NB:Files personalizations
+# in all files feel free to replace "amandine" by your "firstname"(or any name that you want )  
+
+#now run your command line:
+ terraform init
+ terraform validate
+ terraform plan
+ terraform apply
+
+ #to destroy the created resources
+ terraform destroy

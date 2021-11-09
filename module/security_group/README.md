@@ -1,0 +1,1 @@
+create security group(for tls, ssh, http) and open port 80, 22, 443.
