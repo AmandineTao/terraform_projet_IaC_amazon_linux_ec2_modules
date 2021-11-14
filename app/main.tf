@@ -68,3 +68,9 @@ resource "aws_eip_association" "eip_assoc" {
   instance_id   = module.ec2_amazon_linux.instance_id
   allocation_id = module.ip_lb.id
 }
+
+resource "aws_volume_attachment" "ebs_att" {
+  device_name = "/dev/sdh"
+  volume_id   = aws_ebs_volume.ebs_amandine.volume_id
+  instance_id = module.ec2_amazon_linux.instance_id
+}
